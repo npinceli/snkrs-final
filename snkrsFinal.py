@@ -37,4 +37,4 @@ def manage_addSneakers(self, id, connection, RESPONSE):
     RESPONSE.redirect('index_html')
 
 #  formulario para pedir o ID do produto e a conexao com o banco
-manage_addSneakersForm = DTMLFile('views/add_SneakersForm', globals())
+manage_addSneakersForm = DTMLFile('views/dtml/add_SneakersForm', globals())
