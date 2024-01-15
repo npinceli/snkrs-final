@@ -1,0 +1,16 @@
+<form name="form" action="manage_addSneakers" method="post">
+   <p>Adicionar controlador:</p>
+   <p>ID: <input type="text" name="id" value=""></p>
+   <p>
+       Conexão com o banco de dados:
+       <select name="connection">
+           <dtml-in "SQLConnectionIDs()">
+               <option value="<dtml-var sequence-item>">
+                   <dtml-var sequence-key>
+               </option>
+           </dtml-in>
+       </select>
+   </p>
+
+   <p><input type="submit" value="Add Snkrs"></p>
+</form>

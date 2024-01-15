@@ -6,6 +6,7 @@ def initialize(context):
         snkrsFinal.Sneakers,
         constructors = ( 
             # Chamado quando alguem adiciona o produto     
+            snkrsFinal.manage_addSneakersForm,
             snkrsFinal.manage_addSneakers,                                             
         )
     )
