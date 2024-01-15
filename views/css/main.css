@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,400&display=swap');
+
+:root {
+	--primary-font: 'Poppins', sans-serif;
+	--secondary-font: 'Roboto', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('https://c1.wallpaperflare.com/preview/746/358/548/sneaker-nike-streetwear-jordan.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+    
+body {
+	font-family: var(--primary-font);
+	font-weight: 300;
+}
+
+.container {
+	padding: 0 7rem;
+}
+
+.content {
+	text-align: center;
+	height: 100vh;
+}
+
+.content h2 {
+	font-weight: 300;
+	font-size: 1rem;
+	padding-top: 2rem;
+}
+.content h3 {
+	font-size: 2.5rem;
+	font-weight: 300;
+}
+
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+  padding-top: 5rem;
+}
+
+.product-itens {
+  display: grid;
+  grid-template-areas:
+    "image image"
+    "brand brand"
+    "title title"
+    "price buy"
+    "about about";
+  margin: 2rem 0;
+}
+
+.product-itens .brand {
+  grid-area: brand;
+  justify-self: self-start;
+  opacity: 50%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1px;
+}
+
+.product-itens .about {
+  grid-area: about;
+  justify-self: center;
+  margin: 5px 0;
+}
+
+.product-itens .about a{
+  text-decoration: none;
+  color: #000;
+  padding: .5rem 3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  box-sizing: border-box;
+} 
+
+.product-itens .about a:hover{
+  border: 1px solid transparent;
+  background-color: #000;
+  color: #fff;
+  transition: .3s;
+}
+
+.product-itens h1 {
+  grid-area: title;
+  justify-self: self-start;
+  position: absoulute;
+}
+
+.product-itens h1:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.product-itens p {
+  grid-area: price;
+  justify-self: self-start;
+  align-self: center;
+  padding-left: 1px;
+}
+
+.product-itens p span {
+  opacity: 100%;
+}
+
+.product-itens a {
+  grid-area: buy;
+  justify-self: self-end;
+  align-self: center;
+}
+
+.product-itens img {
+  grid-area: image;
+  width: 100%;
+}
+
+.product-itens a:hover svg,
+.product-itens a:active svg,
+.product-itens a:focus svg {
+  stroke: #f71b02;
+}
+
+.product-itens a:visited svg {
+  stroke: black;
+}
+
+.insert {
+  display: inline-block;
+  box-sizing: border-box;
+	color: #FFF;
+	text-decoration: none;
+  padding: 1rem;
+  background-color: #82b5b5;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+
+.insert:hover {
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #FFF;
+  transition: .3s;
+}
+
