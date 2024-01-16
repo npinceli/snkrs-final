@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastrar</title>
+	<link rel="stylesheet" type="text/css" href="insert_css"> 
+</head>
+<body>
+<header tal:content="structure python:here.header_html()">
+</header>
+	<main>
+		<form action="controller/inserir" method="post">
+            <label for="marca">Marca</label>
+            <input class="campo" name="marca" type="text" />
+
+            <label for="nome">Nome</label>
+            <input class="campo" name="nome" type="text" />
+
+            <label for="valor">Valor</label>
+            <input class="campo" name="valor" type="text" />
+
+            <label for="qtd">Quantidade</label>
+            <input class="campo" name="qtd" type="number" />
+
+            <label for="imagem_path">Caminho da Imagem</label>
+            <input class="campo" name="imagem_path" type="text" />
+
+            <input type="submit" value="Enviar" />
+        </form>
+	</main>
+</body>
+</html>

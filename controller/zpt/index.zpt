@@ -12,6 +12,9 @@
 		<section class="container content">
 			<h2>Cole&ccedil;&atilde;o</h2>
 			<h3>Produtos em Destaque</h3>						
+			<tal:block tal:content = "structure python:here.controller.listar()">
+			</tal:block>
+			<a href="controller/inserirForm" class="insert">Cadastrar</a>			
 		</section>
 	</main>
 </body>

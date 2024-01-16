@@ -1,0 +1,1 @@
+select * from sneakers where qtd > 0
