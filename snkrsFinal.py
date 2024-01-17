@@ -18,6 +18,7 @@ class Sneakers(SimpleItem.SimpleItem):
     # nome do produto na lista
     meta_type = 'Sneakers'
 
+    # instanciando a classe da controller
     controller = SneakersC()
 
     manage_options = (

@@ -17,20 +17,21 @@ class SneakersC(SimpleItem.SimpleItem):
     update_html = PageTemplateFile('zpt/update.zpt', globals())
     details_html = PageTemplateFile('zpt/details.zpt', globals())
 
-    meta_type = 'Testando'
+    meta_type = 'Controller'
 
+    # instanciando a classe da model
     model_ = SneakersM()
 
     def listarMethod(self):
-        "chama o metodo"
+        "chama o metodo da model"
         return self.model_.list_snkrs()
 
     def listar(self):
-        "chama a lista"
+        "chama a instancia da pagina de listar os tenis"
         return self.list_html()
 
     def inserirForm(self):
-        "mostra o form de insert"
+        "chama a instancia do form de inserir os tenis"
         return self.insert_html()
 
     def inserir(self, marca, nome, valor, qtd, imagem_path):
@@ -39,11 +40,11 @@ class SneakersC(SimpleItem.SimpleItem):
         self.REQUEST.RESPONSE.redirect('index_html')
 
     def procurar(self, card_id):
-        "chama o metodo"
+        "chama o metodo da model que procura o tenis pelo id"
         return self.model_.search_snkrs(card_id=card_id)    
 
     def updateForm(self):
-        "mostra o form de update"
+        "chama a instancia do form de atualizar os tenis"
         return self.update_html()
     
     def update(self, marca, nome, valor, qtd, imagem_path, card_id):

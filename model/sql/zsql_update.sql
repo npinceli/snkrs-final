@@ -6,4 +6,4 @@ SET
   qtd = <dtml-sqlvar qtd type="int">,
   imagem_path = <dtml-sqlvar imagem_path type="string">
 WHERE
-  id = <dtml-var card_id>;
+  id = <dtml-sqlvar card_id type="int">;

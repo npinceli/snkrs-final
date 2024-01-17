@@ -1,1 +1,1 @@
-delete from sneakers where id = <dtml-var card_id>
+delete from sneakers where id = <dtml-sqlvar card_id type="int">;
