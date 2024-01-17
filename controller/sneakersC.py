@@ -9,11 +9,13 @@ class SneakersC(SimpleItem.SimpleItem):
     # css
     insert_css = PageTemplateFile('zpt/css/cadastrar.css', globals())
     update_css = PageTemplateFile('zpt/css/update.css', globals())
+    details_css = PageTemplateFile('zpt/css/details.css', globals())
 
     # html
     list_html = PageTemplateFile('zpt/list.zpt', globals())
     insert_html = PageTemplateFile('zpt/insert.zpt', globals())
     update_html = PageTemplateFile('zpt/update.zpt', globals())
+    details_html = PageTemplateFile('zpt/details.zpt', globals())
 
     meta_type = 'Testando'
 
@@ -53,3 +55,7 @@ class SneakersC(SimpleItem.SimpleItem):
         "chama o metodo e retorna pro index" 
         self.model_.delete_snkrs(card_id=card_id)
         self.REQUEST.RESPONSE.redirect('index_html')
+
+    def details(self):
+        "chama a pagina details"
+        return self.details_html()

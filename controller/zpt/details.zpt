@@ -1,0 +1,33 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="details_css" />
+  </head>
+  <header tal:content="structure python:here.header_html()"></header>
+  <body>
+    <section>
+    
+    <tal:tag tal:define="card_id request/card_id">
+    
+    <div tal:repeat = "busca python:here.controller.procurar(card_id)">
+        <section class="sneaker">
+            <div class="sneaker-left">
+                <img class="sneaker-img" tal:attributes="src busca/imagem_path"/>
+            </div>
+            <div class="sneaker-right">
+                <span class="marca" tal:content="busca/marca">Nike</span>
+                <h1 class="nome" tal:content="busca/nome">Dunk SB Pro</h1>
+                <h2 class="valor">R$ <span class="valor" tal:content="busca/valor">999,99</span></h2>
+                <p class="qtd">
+                    Quantidade em estoque: <span class="qtd-number" tal:content="busca/qtd">1</span>
+                </p>
+                <a class="btn-add" href="#">Adicionar ao carrinho</a>
+            </div>
+        </section>
+    </div>
+    </tal:tag>
+    </section>
+  </body>
+</html>

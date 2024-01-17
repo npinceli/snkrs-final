@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--primary-font);
+    height: 100vh;
+  }
+  
+  .sneaker {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 10rem;
+    gap: 0rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  
+  .sneaker-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .sneaker-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sneaker-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sneaker-right .nome {
+    font-size: 2rem;
+  }
+  
+  .sneaker-right .valor {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  
+  .sneaker-right .qtd {
+    margin: 2rem 0;
+  }
+  
+  .sneaker-right .btn-add {
+    text-decoration: none;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  .sneaker-right .btn-add:hover {
+    background-color: #000;
+    transition: 0.3s;
+    color: #fff;
+  }
