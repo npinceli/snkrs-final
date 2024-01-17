@@ -1,0 +1,1 @@
+select * from sneakers where id = <dtml-sqlvar card_id type="int">

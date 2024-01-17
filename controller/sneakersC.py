@@ -8,10 +8,12 @@ class SneakersC(SimpleItem.SimpleItem):
 
     # css
     insert_css = PageTemplateFile('zpt/css/cadastrar.css', globals())
+    update_css = PageTemplateFile('zpt/css/update.css', globals())
 
     # html
     list_html = PageTemplateFile('zpt/list.zpt', globals())
     insert_html = PageTemplateFile('zpt/insert.zpt', globals())
+    update_html = PageTemplateFile('zpt/update.zpt', globals())
 
     meta_type = 'Testando'
 
@@ -26,10 +28,28 @@ class SneakersC(SimpleItem.SimpleItem):
         return self.list_html()
 
     def inserirForm(self):
-        "mostrar o form de insert"
+        "mostra o form de insert"
         return self.insert_html()
 
     def inserir(self, marca, nome, valor, qtd, imagem_path):
         "chama o metodo e retorna pro index"
         self.model_.insert_snkrs(marca=marca, nome=nome, valor=valor, qtd=qtd, imagem_path=imagem_path)
+        self.REQUEST.RESPONSE.redirect('index_html')
+
+    def procurar(self, card_id):
+        "chama o metodo"
+        return self.model_.search_snkrs(card_id=card_id)    
+
+    def updateForm(self):
+        "mostra o form de update"
+        return self.update_html()
+    
+    def update(self, marca, nome, valor, qtd, imagem_path, card_id):
+        "chama o metodo e retorna pro index"
+        self.model_.update_snkrs(marca=marca, nome=nome, valor=valor, qtd=qtd, imagem_path=imagem_path, card_id=card_id)
+        self.REQUEST.RESPONSE.redirect('index_html')
+
+    def deletar(self, card_id):
+        "chama o metodo e retorna pro index" 
+        self.model_.delete_snkrs(card_id=card_id)
         self.REQUEST.RESPONSE.redirect('index_html')

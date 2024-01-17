@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Atualizar</title>
+	<link rel="stylesheet" type="text/css" href="update_css"> 
+</head>
+<body>
+<header tal:content = "structure python:here.header_html()">
+</header>
+<main>
+
+	<tal:block tal:define="card_id request/card_id">
+    
+    <div tal:repeat="busca python:here.controller.procurar(card_id)"> 
+            <form action="controller/update" method="get">
+                <input type="hidden" name="card_id" tal:attributes="value busca/id">  
+                <label for="marca">Marca</label>
+                <input class="campo" name="marca" tal:attributes="value busca/marca">
+
+                <label for="nome">Nome</label>
+                <input class="campo" name="nome" tal:attributes="value busca/nome"/>
+
+                <label for="valor">Valor</label>
+                <input class="campo" name="valor" tal:attributes="value busca/valor"/>
+
+                <label for="qtd">Quantidade</label>
+                <input class="campo" name="qtd" tal:attributes="value busca/qtd"/>
+
+                <label for="imagem_path">Imagem</label>
+                <input class="campo" name="imagem_path" tal:attributes="value busca/imagem_path"/>
+
+                <input class="atualizar" type="submit" value="Atualizar" />
+            </form>
+                                           
+            <form action="controller/deletar" method="get">
+                <input type="hidden" name="card_id" tal:attributes="value busca/id">                     
+                <input class="deletar" type="submit" value="Deletar">      
+            </form>
+    </div>
+
+    </tal:block>
+
+</main>
+</body>
+</html>

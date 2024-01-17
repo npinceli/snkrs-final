@@ -1,0 +1,1 @@
+delete from sneakers where id = <dtml-var card_id>
